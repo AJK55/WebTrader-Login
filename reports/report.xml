@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite name="TestCafe Tests: Chrome 73.0.3683 / Windows 10.0.0" tests="2" failures="0" skipped="0" errors="0" time="22.519" timestamp="Mon, 15 Apr 2019 12:42:16 GMT" >
-  <testcase classname="WT CI Test" name="CI Platform" time="9.35">
-  </testcase>
-  <testcase classname="WT Forex.com Test" name="CI Platform" time="13.079">
-  </testcase>
-</testsuite>
