@@ -2,8 +2,10 @@ import {
     Selector
 } from 'testcafe';
 import Page from './pageObject';
+import Platform from './platform'
 
 const page = new Page();
+const plat = new Platform();
 
 fixture('WT CI Test')
     .page(page.ciURL);
@@ -22,8 +24,55 @@ test('CI Platform', async t => {
         .typeText(page.ciPassField, page.password)
     await t
         .click(page.ciSubmit)
+    await t
+        .click(plat.contactUs)
+    await t
+        .click(plat.contactUs)
+    await t
+        .click(plat.notification)
+    await t
+        .click(plat.notification)
+    await t
+        .click(plat.browseMkts)
+    await t
+        .click(plat.popular)
+    await t
+        .click(plat.bonds)
+    await t
+        .click(plat.trendMkts)
+    await t
+        .click(plat.commodites)
+    await t
+        .click(plat.equities)
+    await t
+        .click(plat.fx)
+    await t
+        .click(plat.indicies)
+    await t
+        .click(plat.interstRates)
+    await t
+        .click(plat.iShares)
+    await t
+        .click(plat.metals)
+    await t
+        .click(plat.options)
+    await t
+        .click(plat.sectors)
+    await t
+        .click(plat.fxMetals)
+    await t
+        .click(plat.crypto)
 
-    console.log(await page.versionNum.innerText)
+
+    console.log(await plat.versionNum.innerText)
+
+    await t
+        .click(plat.iconBut)
+    await t
+        .click(plat.logOut) //logout
+
+
+
 
 });
 
@@ -47,7 +96,51 @@ test('CI Platform', async t => {
         .typeText(page.fxPassField, page.password)
     await t
         .click(page.fxSubmit)
+    await t
+        .click(plat.contactUs)
+    await t
+        .click(plat.contactUs)
+    await t
+        .click(plat.notification)
+    await t
+        .click(plat.notification)
+    await t
+        .click(plat.browseMkts)
+    await t
+        .click(plat.popular)
+    await t
+        .click(plat.bonds)
+    await t
+        .click(plat.trendMkts)
+    await t
+        .click(plat.commodites)
+    await t
+        .click(plat.equities)
+    await t
+        .click(plat.fx)
+    await t
+        .click(plat.indicies)
+    await t
+        .click(plat.interstRates)
+    await t
+        .click(plat.iShares)
+    await t
+        .click(plat.metals)
+    await t
+        .click(plat.options)
+    await t
+        .click(plat.sectors)
+    await t
+        .click(plat.fxMetals)
+    await t
+        .click(plat.crypto)
 
-    console.log(await page.versionNum.innerText)
+    console.log(await plat.versionNum.innerText)
+
+    await t
+        .click(plat.iconBut)
+    await t
+        .click(plat.logOut) //logout
+
 
 });

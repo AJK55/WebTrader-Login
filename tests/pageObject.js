@@ -31,9 +31,7 @@ export default class Page {
             this.fxSubmit = Selector('#formSubmit')
         ];
 
-        this.platformVersion = [
-            this.versionNum = Selector('body > div.version')
-        ];
+
 
     }
 }
