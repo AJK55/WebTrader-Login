@@ -1,51 +1,53 @@
 import {
     Selector
-} from 'testcafe'
+} from 'testcafe';
+import Page from './pageObject';
 
+const page = new Page();
 
 fixture('WT CI Test')
-    .page('https://trade.loginandtrade.com/cityindex/#/');
+    .page(page.ciURL);
 
 
 
 test('CI Platform', async t => {
 
+    //await t
+    //  .click(Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'))
     await t
-        .click(Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'))
+        .typeText(page.ciUserField, page.userName)
+    //await t
+    //  .click(Selector('#c-password'))
     await t
-        .typeText(Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'), 'DA918641')
+        .typeText(page.ciPassField, page.password)
     await t
-        .click(Selector('#c-password'))
-    await t
-        .typeText(Selector('#c-password'), 'password')
-    await t
-        .click(Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div:nth-child(4) > div > input'))
+        .click(page.ciSubmit)
 
-    console.log(await Selector('body > div.version').innerText)
+    console.log(await page.versionNum.innerText)
 
 });
 
 
 fixture('WT Forex.com Test')
-    .page('https://www.forex.com/en-uk/account-login/');
+    .page(page.fxURL);
 
 
 
 test('CI Platform', async t => {
 
     await t
-        .click(Selector('body > div.remodal-wrapper > div > div > div > div.modal__content > div > div:nth-child(1) > a'))
+        .click(page.fxContinue)
     await t
-        .click(Selector('body > main > div.description > section > div > div > div:nth-child(1) > div > div > div > form > div:nth-child(4) > div > label'))
+        .click(page.fxUserClick)
     await t
-        .typeText(Selector('#platformUsername'), 'DA918641')
+        .typeText(page.fxUserField, page.userName)
     await t
-        .click(Selector('body > main > div.description > section > div > div > div:nth-child(1) > div > div > div > form > div:nth-child(5) > div:nth-child(1) > label'))
+        .click(page.fxPassClick)
     await t
-        .typeText(Selector('#platformPassword'), 'password')
+        .typeText(page.fxPassField, page.password)
     await t
-        .click(Selector('#formSubmit'))
+        .click(page.fxSubmit)
 
-    console.log(await Selector('body > div.version').innerText)
+    console.log(await page.versionNum.innerText)
 
 });
