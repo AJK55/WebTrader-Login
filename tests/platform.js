@@ -13,7 +13,7 @@ export default class Platform {
             this.contactUs = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > app-feedback > div > span'),
             this.notification = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > div.toggle-help > span'),
             this.iconBut = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > app-user-menu > div > i'),
-            this.browseMkts = Selector('body > app-root > div > div.mercury__body > div > app-workspace-header > div.workspace__item.workspace__item--active > div > span'),
+            this.browseMkts = Selector('body > app-root > div > div.mercury__body > div > app-workspace-header > div:nth-child(2) > div'),
             this.logOut = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > app-user-menu > div > div > ul > li.user-menu__list-item.link--log-out > a')
         ];
 
