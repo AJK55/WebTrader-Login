@@ -1,6 +1,9 @@
 import {
     Selector
 } from 'testcafe';
+import {
+    ClientFunction
+} from 'testcafe';
 import Page from './pageObject';
 import Platform from './platform'
 
@@ -87,6 +90,10 @@ fixture('WT Forex.com Test')
 
 test('CI Platform', async t => {
 
+    const browserscroll = ClientFunction(function () {
+        window.scrollBy(0, 500)
+    });
+
     await t
         .click(page.fxContinue)
     await t
@@ -97,10 +104,11 @@ test('CI Platform', async t => {
         .click(page.fxPassClick)
     await t
         .typeText(page.fxPassField, page.password)
-    //await t
-    //  .click(page.fxSubmit)
+
+    await browserscroll()
+
     await t
-        .pressKey('enter')
+        .click(page.fxSubmit)
     await t
         .click(plat.contactUs)
     await t
