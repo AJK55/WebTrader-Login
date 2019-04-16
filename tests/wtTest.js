@@ -10,8 +10,6 @@ const plat = new Platform();
 fixture('WT CI Test')
     .page(page.ciURL);
 
-
-
 test('CI Platform', async t => {
 
     //await t
@@ -34,6 +32,14 @@ test('CI Platform', async t => {
         .click(plat.notification)
     await t
         .click(plat.browseMkts)
+    await t
+        .click(plat.questions)
+    await t
+        .click(plat.manageRisk)
+    await t
+        .click(plat.backRisk)
+    await t
+        .click(plat.questions)
     await t
         .click(plat.popular)
     await t
@@ -63,7 +69,6 @@ test('CI Platform', async t => {
     await t
         .click(plat.crypto)
 
-
     console.log(await plat.versionNum.innerText)
 
     await t
@@ -79,8 +84,6 @@ test('CI Platform', async t => {
 
 fixture('WT Forex.com Test')
     .page(page.fxURL);
-
-
 
 test('CI Platform', async t => {
 
@@ -106,6 +109,14 @@ test('CI Platform', async t => {
         .click(plat.notification)
     await t
         .click(plat.browseMkts)
+    await t
+        .click(plat.questions)
+    await t
+        .click(plat.manageRisk)
+    await t
+        .click(plat.backRisk)
+    await t
+        .click(plat.questions)
     await t
         .click(plat.popular)
     await t

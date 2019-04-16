@@ -12,6 +12,9 @@ export default class Platform {
         this.platform = [
             this.contactUs = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > app-feedback > div > span'),
             this.notification = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > div.toggle-help > span'),
+            this.questions = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > div.toggle-help > span'),
+            this.manageRisk = Selector('body > app-root > div > div.mercury__body > app-help > div.help-menu.ng-star-inserted > div:nth-child(4) > div:nth-child(3) > span'),
+            this.backRisk = Selector('body > app-root > div > div.mercury__body > app-help > div > div.close-page'),
             this.iconBut = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > app-user-menu > div > i'),
             this.browseMkts = Selector('body > app-root > div > div.mercury__body > div > app-workspace-header > div:nth-child(2) > div'),
             this.logOut = Selector('body > app-root > div > div.mercury__header > app-header > div.right > div.icon-bar > app-user-menu > div > div > ul > li.user-menu__list-item.link--log-out > a')
