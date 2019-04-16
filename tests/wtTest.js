@@ -1,11 +1,16 @@
 import {
     Selector
 } from 'testcafe';
+import {
+    ClientFunction
+} from 'testcafe';
 import Page from './pageObject';
-import Platform from './platform'
+import Platform from './platform';
+import Functions from './functions';
 
 const page = new Page();
 const plat = new Platform();
+const func = new Functions();
 
 fixture('WT CI Test')
     .page(page.ciURL);
@@ -97,6 +102,9 @@ test('CI Platform', async t => {
         .click(page.fxPassClick)
     await t
         .typeText(page.fxPassField, page.password)
+
+    await func.browserscroll();
+
     await t
         .click(page.fxSubmit)
     await t
