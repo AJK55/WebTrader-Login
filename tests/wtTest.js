@@ -90,7 +90,7 @@ test('CI Platform', async t => {
 fixture('WT Forex.com Test')
     .page(page.fxURL);
 
-test('CI Platform', async t => {
+test('WT Forex.com Platform', async t => {
 
     await t
         .click(page.fxContinue)
