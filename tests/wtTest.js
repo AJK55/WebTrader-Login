@@ -103,7 +103,7 @@ test('CI Platform', async t => {
     await t
         .typeText(page.fxPassField, page.password)
 
-    await func.browserscroll();
+    await func.browserscroll(0, 500)
 
     await t
         .click(page.fxSubmit)
