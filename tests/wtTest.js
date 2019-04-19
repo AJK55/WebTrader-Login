@@ -4,9 +4,9 @@ import {
 import {
     ClientFunction
 } from 'testcafe';
-import Page from './shared/pageObject';
-import Platform from './shared/platform';
-import Functions from './shared/functions';
+import Page from '../shared/pageObject';
+import Platform from '../shared/platform';
+import Functions from '../shared/functions';
 
 const page = new Page();
 const plat = new Platform();
