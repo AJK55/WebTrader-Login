@@ -166,7 +166,7 @@ test('WT Forex.com Platform', async t => {
         .click(plat.fxMetals)
     await t
         .click(plat.crypto)
-    // console.log(await plat.versionNum.innerText)
+    console.log(await plat.versionNum.innerText)
     await t
         .click(plat.iconBut)
     await t
