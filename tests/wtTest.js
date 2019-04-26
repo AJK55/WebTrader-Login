@@ -12,19 +12,21 @@ const page = new Page();
 const plat = new Platform();
 const func = new Functions();
 
+
 fixture('WT CI Test')
     .page(page.ciURL);
 
 test('CI Platform', async t => {
 
-    //await t
-    //  .click(Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'))
     await t
         .typeText(page.ciUserField, page.userName)
-    //await t
-    //  .click(Selector('#c-password'))
     await t
         .typeText(page.ciPassField, page.password)
+
+    if (await page.ciSubmit.visible === false) {
+        await func.browserscroll(0, 500)
+    }
+
     await t
         .click(page.ciSubmit)
     await t
@@ -69,17 +71,20 @@ test('CI Platform', async t => {
         .click(plat.options)
     await t
         .click(plat.sectors)
+
+    if (await plat.fxMetals.visible === false) {
+        await func.browserscroll(0, 500)
+    }
+
     await t
         .click(plat.fxMetals)
     await t
         .click(plat.crypto)
-
     console.log(await plat.versionNum.innerText)
-
     await t
         .click(plat.iconBut)
     await t
-        .click(plat.logOut) //logout
+        .click(plat.logOut)
 
 
 
@@ -103,8 +108,11 @@ test('WT Forex.com Platform', async t => {
     await t
         .typeText(page.fxPassField, page.password)
 
-    await func.browserscroll(0, 500)
+    //console.log(await page.fxSubmit.visible);
 
+    if (await page.fxSubmit.visible === false) {
+        await func.browserscroll(0, 500)
+    }
     await t
         .click(page.fxSubmit)
     await t
@@ -149,13 +157,16 @@ test('WT Forex.com Platform', async t => {
         .click(plat.options)
     await t
         .click(plat.sectors)
+
+    if (await plat.fxMetals.visible === false) {
+        await func.browserscroll(0, 500)
+    }
+
     await t
         .click(plat.fxMetals)
     await t
         .click(plat.crypto)
-
-    console.log(await plat.versionNum.innerText)
-
+    // console.log(await plat.versionNum.innerText)
     await t
         .click(plat.iconBut)
     await t
