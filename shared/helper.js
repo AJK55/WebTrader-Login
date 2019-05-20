@@ -1,6 +1,10 @@
 import Platform from '../shared/platform';
+import Page from '../shared/pageObject';
+import Functions from '../shared/functions';
 
 const plat = new Platform();
+const page = new Page();
+const func = new Functions();
 
 export async function platActions(t) {
     // Note that it's an async function.
@@ -38,4 +42,38 @@ export async function platActions(t) {
     await t
         .click(plat.iconBut)
         .click(plat.logOut)
+}
+
+export async function ciLogin(t) {
+    // Note that it's an async function.
+    // Also it necessary to pass a test controller object `t` as an argument to execute actions
+    await t
+        .click(page.webTraderTab)
+        .click(page.ciUserField)
+        .typeText(page.ciUserField, page.userName)
+        .click(page.ciPassField)
+        .typeText(page.ciPassField, page.password)
+
+    if (await page.ciSubmit.visible === false) {
+        await func.browserscroll(0, 500)
+    }
+    await t
+        .click(page.ciSubmit)
+}
+
+export async function fxLogin(t) {
+    // Note that it's an async function.
+    // Also it necessary to pass a test controller object `t` as an argument to execute actions
+    await t
+        .click(page.fxContinue)
+        .click(page.fxUserClick)
+        .typeText(page.fxUserField, page.userName)
+        .click(page.fxPassClick)
+        .typeText(page.fxPassField, page.password)
+
+    if (await page.fxSubmit.visible === false) {
+        await func.browserscroll(0, 500)
+    }
+    await t
+        .click(page.fxSubmit)
 }
