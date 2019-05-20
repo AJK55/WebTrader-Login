@@ -5,11 +5,32 @@ import {
     platActions
 } from '../shared/helper.js';
 import {
+    platActionsTF
+} from '../shared/helper.js';
+import {
+    platActionsAlly
+} from '../shared/helper.js';
+import {
+    platActionsWhsIi
+} from '../shared/helper.js';
+import {
     ciLogin
 } from '../shared/helper.js';
 import {
     fxLogin
-} from '../shared/helper.js'
+} from '../shared/helper.js';
+import {
+    tfLogin
+} from '../shared/helper.js';
+import {
+    allyLogin
+} from '../shared/helper.js';
+import {
+    whsLogin
+} from '../shared/helper.js';
+import {
+    iiLogin
+} from '../shared/helper.js';
 import Page from '../shared/pageObject';
 const page = new Page();
 
@@ -22,10 +43,37 @@ test('CI Platform', async t => {
     await platActions(t);
 });
 
-
 fixture('WT Forex.com Test')
     .page(page.fxURL);
 test('WT Forex.com Platform', async t => {
     await fxLogin(t);
     await platActions(t);
+});
+
+fixture('WT TradFair Test')
+    .page(page.tfURL);
+test('WT TradFair Platform', async t => {
+    await tfLogin(t);
+    await platActionsTF(t);
+});
+
+fixture('WT Ally Test')
+    .page(page.allyURL);
+test('WT Ally Platform', async t => {
+    await allyLogin(t);
+    await platActionsAlly(t);
+});
+
+fixture('WT WHS Test')
+    .page(page.whsURL);
+test('WT WHS Platform', async t => {
+    await whsLogin(t);
+    await platActionsWhsIi(t);
+});
+
+fixture('WT II Test')
+    .page(page.iiURL);
+test('WT II Platform', async t => {
+    await iiLogin(t);
+    await platActionsWhsIi(t);
 });
