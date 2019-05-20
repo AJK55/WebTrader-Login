@@ -6,7 +6,7 @@ import {
 } from 'testcafe';
 import {
     platActions
-} from '../shared/platform';
+} from '../shared/helper.js';
 
 import Page from '../shared/pageObject';
 import Platform from '../shared/platform';
@@ -40,65 +40,7 @@ test('CI Platform', async t => {
     await t
         .click(page.ciSubmit)
 
-
-    await t
-        .click(plat.contactUs)
-    await t
-        .click(plat.contactUs)
-    await t
-        .click(plat.notification)
-    await t
-        .click(plat.notification)
-    await t
-        .click(plat.browseMkts)
-    await t
-        .click(plat.questions)
-    await t
-        .click(plat.manageRisk)
-    await t
-        .click(plat.backRisk)
-    await t
-        .click(plat.questions)
-    await t
-        .click(plat.popular)
-    await t
-        .click(plat.bonds)
-    await t
-        .click(plat.trendMkts)
-    await t
-        .click(plat.commodites)
-    await t
-        .click(plat.equities)
-    await t
-        .click(plat.fx)
-    await t
-        .click(plat.indicies)
-    await t
-        .click(plat.interstRates)
-    await t
-        .click(plat.iShares)
-    await t
-        .click(plat.metals)
-    await t
-        .click(plat.options)
-    await t
-        .click(plat.sectors)
-
-    if (await plat.fxMetals.visible === false) {
-        await func.browserscroll(0, 500)
-    }
-
-    await t
-        .click(plat.fxMetals)
-    await t
-        .click(plat.crypto)
-    console.log(await plat.versionNum.innerText)
-    await t
-        .click(plat.iconBut)
-    await t
-        .click(plat.logOut)
-
-
+    await platActions(t);
 
 });
 
@@ -119,69 +61,14 @@ test('WT Forex.com Platform', async t => {
     await t
         .typeText(page.fxPassField, page.password)
 
-    //console.log(await page.fxSubmit.visible);
-
     if (await page.fxSubmit.visible === false) {
         await func.browserscroll(0, 500)
     }
     await t
         .click(page.fxSubmit)
-    await t
-        .click(plat.contactUs)
-    await t
-        .click(plat.contactUs)
-    await t
-        .click(plat.notification)
-    await t
-        .click(plat.notification)
-    await t
-        .click(plat.browseMkts)
-    await t
-        .click(plat.questions)
-    await t
-        .click(plat.manageRisk)
-    await t
-        .click(plat.backRisk)
-    await t
-        .click(plat.questions)
-    await t
-        .click(plat.popular)
-    await t
-        .click(plat.bonds)
-    await t
-        .click(plat.trendMkts)
-    await t
-        .click(plat.commodites)
-    await t
-        .click(plat.equities)
-    await t
-        .click(plat.fx)
-    await t
-        .click(plat.indicies)
-    await t
-        .click(plat.interstRates)
-    await t
-        .click(plat.iShares)
-    await t
-        .click(plat.metals)
-    await t
-        .click(plat.options)
-    await t
-        .click(plat.sectors)
 
-    if (await plat.fxMetals.visible === false) {
-        await func.browserscroll(0, 500)
-    }
+    await platActions(t);
 
-    await t
-        .click(plat.fxMetals)
-    await t
-        .click(plat.crypto)
-    console.log(await plat.versionNum.innerText)
-    await t
-        .click(plat.iconBut)
-    await t
-        .click(plat.logOut) //logout
 
 
 });
