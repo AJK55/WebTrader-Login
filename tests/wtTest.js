@@ -4,6 +4,10 @@ import {
 import {
     ClientFunction
 } from 'testcafe';
+import {
+    platActions
+} from '../shared/platform';
+
 import Page from '../shared/pageObject';
 import Platform from '../shared/platform';
 import Functions from '../shared/functions';
@@ -19,7 +23,13 @@ fixture('WT CI Test')
 test('CI Platform', async t => {
 
     await t
+        .click(page.webTraderTab)
+    await t
+        .click(page.ciUserField)
+    await t
         .typeText(page.ciUserField, page.userName)
+    await t
+        .click(page.ciPassField)
     await t
         .typeText(page.ciPassField, page.password)
 
@@ -29,6 +39,8 @@ test('CI Platform', async t => {
 
     await t
         .click(page.ciSubmit)
+
+
     await t
         .click(plat.contactUs)
     await t
@@ -85,7 +97,6 @@ test('CI Platform', async t => {
         .click(plat.iconBut)
     await t
         .click(plat.logOut)
-
 
 
 

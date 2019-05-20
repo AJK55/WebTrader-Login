@@ -17,9 +17,12 @@ export default class Page {
         ];
 
         this.ciObjects = [
-            this.ciUserField = Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'),
+            this.webTraderTab = Selector('#brand-webtrader-tab-label'),
+            //this.ciUserField = Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'),
             this.ciPassField = Selector('#c-password'),
-            this.ciSubmit = Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div:nth-child(4) > div > input')
+            this.ciUserField = Selector('#ifelite-login > div > main > brand-login > div.brand > div.brand-tabs > div.brand-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'),
+            //this.ciSubmit = Selector('#ifelite-login > div > main > cityindex-login > div > div.cityindex-tabs > div.cityindex-tabs-content > div > div:nth-child(1) > form > div:nth-child(4) > div > input'),
+            this.ciSubmit = Selector('#ifelite-login > div > main > brand-login > div.brand > div.brand-tabs > div.brand-tabs-content > div > div:nth-child(1) > form > div:nth-child(4) > div > input')
 
         ];
 
