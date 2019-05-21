@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "test": "testcafe \"saucelabs:Chrome:Windows 10\" tests/*"
+        "test": "testcafe \"saucelabs:Chrome:Windows 10\" tests/* -e"
     },
     "devDependencies": {
         "testcafe": "*",
