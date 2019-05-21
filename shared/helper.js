@@ -69,11 +69,11 @@ export async function platActionsTF(t) {
         .click(plat.metals)
         .click(plat.options)
         .click(plat.sectors)
-    if (await plat.fxMetals.visible === false) {
+    if (await plat.fx.visible === false) {
         await func.browserscroll(0, 500)
     }
     await t
-        .click(plat.fxMetals)
+        .click(plat.fx)
     await t
     console.log(await plat.versionNum.innerText)
     await t
@@ -125,7 +125,7 @@ export async function platActionsWhsIi(t) {
         .click(plat.iShares)
         .click(plat.metals)
         .click(plat.options)
-        .click(plat.sectors)
+    //.click(plat.sectors)
     if (await plat.fx.visible === false) {
         await func.browserscroll(0, 500)
     }
