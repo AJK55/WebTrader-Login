@@ -11,7 +11,8 @@ export default class Page {
             this.tfURL = 'https://trade.loginandtrade.com/tradefair/webtrader/',
             this.allyURL = 'https://trade.loginandtrade.com/allyinvest/webtrader/',
             this.whsURL = 'https://trade.loginandtrade.com/whs/webtrader/',
-            this.iiURL = 'https://trade.loginandtrade.com/ii/webtrader/'
+            this.iiURL = 'https://trade.loginandtrade.com/ii/webtrader/',
+            this.gtxURL = 'https://trade.loginandtrade.com/dma/DA284758/bb94f2ed-9cea-45db-87dc-e028209da9dc'
         ];
 
         this.credentials = [

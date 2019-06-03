@@ -32,8 +32,10 @@ import {
     iiLogin
 } from '../shared/helper.js';
 import Page from '../shared/pageObject';
-const page = new Page();
+import Platform from '../shared/platform';
 
+const plat = new Platform();
+const page = new Page();
 
 
 fixture('WT CI Test')
@@ -42,6 +44,7 @@ test('CI Platform', async t => {
     await ciLogin(t);
     await platActions(t);
 });
+
 
 fixture('WT Forex.com Test')
     .page(page.fxURL);
@@ -76,4 +79,14 @@ fixture('WT II Test')
 test('WT II Platform', async t => {
     await iiLogin(t);
     await platActionsWhsIi(t);
+});
+
+
+fixture('WT GTX Test')
+    .page(page.gtxURL);
+test('WT GTX Platform', async t => {
+
+    await t
+    console.log(await plat.versionNum.innerText)
+
 });
