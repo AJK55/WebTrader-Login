@@ -36,7 +36,7 @@ export async function platActions(t) {
     }
     await t
         .click(plat.fxMetals)
-        .click(plat.crypto)
+    //.click(plat.crypto)
     await t
     console.log(await plat.versionNum.innerText)
     await t
@@ -148,7 +148,7 @@ export async function ciLogin(t) {
         .click(page.ciUserField)
         .typeText(page.ciUserField, page.userName)
         .click(page.ciPassField)
-        .typeText(page.ciPassField, page.password)
+        .typeText(page.ciPassField, page.fxciPass)
 
     if (await page.ciSubmit.visible === false) {
         await func.browserscroll(0, 500)
@@ -165,7 +165,7 @@ export async function fxLogin(t) {
         .click(page.fxUserClick)
         .typeText(page.fxUserField, page.userName)
         .click(page.fxPassClick)
-        .typeText(page.fxPassField, page.password)
+        .typeText(page.fxPassField, page.fxciPass)
 
     if (await page.fxSubmit.visible === false) {
         await func.browserscroll(0, 500)

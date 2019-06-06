@@ -16,7 +16,8 @@ export default class Page {
         ];
 
         this.credentials = [
-            this.userName = 'DA918641',
+            this.userName = 'june0619@june.com',
+            this.fxciPass = 'june0619',
             this.tfUser = 'XX413601',
             this.whsUser = 'XX584846',
             this.iiUser = 'XX956277',
