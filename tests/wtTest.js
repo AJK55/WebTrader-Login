@@ -31,6 +31,13 @@ import {
 import {
     iiLogin
 } from '../shared/helper.js';
+import {
+    platActionsFxf
+} from '../shared/helper.js';
+import {
+    fxfLogin
+} from '../shared/helper.js';
+
 import Page from '../shared/pageObject';
 import Platform from '../shared/platform';
 
@@ -89,4 +96,12 @@ test('WT GTX Platform', async t => {
     await t
     console.log(await plat.versionNum.innerText)
 
+});
+
+
+fixture('WT FXFlat Test')
+    .page(page.fxfURL);
+test('FXFlat Platform', async t => {
+    await fxfLogin(t);
+    await platActionsFxf(t);
 });

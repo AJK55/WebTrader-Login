@@ -12,7 +12,8 @@ export default class Page {
             this.allyURL = 'https://trade.loginandtrade.com/allyinvest/webtrader/',
             this.whsURL = 'https://trade.loginandtrade.com/whs/webtrader/',
             this.iiURL = 'https://trade.loginandtrade.com/ii/webtrader/',
-            this.gtxURL = 'https://trade.loginandtrade.com/dma/DA284758/bb94f2ed-9cea-45db-87dc-e028209da9dc'
+            this.gtxURL = 'https://trade.loginandtrade.com/dma/DA284758/bb94f2ed-9cea-45db-87dc-e028209da9dc',
+            this.fxfURL = 'https://trade.loginandtrade.com/fxflat/#/'
         ];
 
         this.credentials = [
@@ -22,6 +23,7 @@ export default class Page {
             this.whsUser = 'XX584846',
             this.iiUser = 'XX956277',
             this.allyUser = 'XX964324',
+            this.fxfUser = 'DA841003',
             this.password = 'password'
 
         ];
@@ -68,6 +70,13 @@ export default class Page {
             this.iiUserField = Selector('#ifelite-login > div > main > brand-login > div.brand > div.brand-tabs > div.brand-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'),
             this.iiPassField = Selector('#c-password'),
             this.iiSubmit = Selector('#ifelite-login > div > main > brand-login > div.brand > div.brand-tabs > div.brand-tabs-content > div > div:nth-child(1) > form > div:nth-child(4) > div > input')
+        ]
+
+        this.fxfObjects = [
+            this.fxfWTTab = Selector('#brand-webtrader-tab-label'),
+            this.fxfUserField = Selector('#ifelite-login > div > main > brand-login > div.brand > div.brand-tabs > div.brand-tabs-content > div > div:nth-child(1) > form > div.field.login-field > input'),
+            this.fxfPassField = Selector('#c-password'),
+            this.fxfSubmit = Selector('#ifelite-login > div > main > brand-login > div.brand > div.brand-tabs > div.brand-tabs-content > div > div:nth-child(1) > form > div:nth-child(4) > div > input')
         ]
 
     }

@@ -101,6 +101,26 @@ export async function platActionsAlly(t) {
         .click(plat.logOut)
 }
 
+export async function platActionsFxf(t) {
+    // Note that it's an async function.
+    // Also it necessary to pass a test controller object `t` as an argument to execute actions
+    await t
+        .click(plat.contactUs)
+        .click(plat.contactUs)
+        .click(plat.notification)
+        .click(plat.notification)
+        .click(plat.browseMkts)
+        .click(plat.questions)
+        .click(plat.manageRisk)
+        .click(plat.backRisk)
+        .click(plat.questions)
+        .click(plat.popular)
+    console.log(await plat.versionNum.innerText)
+    await t
+        .click(plat.iconBut)
+        .click(plat.logOut)
+}
+
 export async function platActionsWhsIi(t) {
     // Note that it's an async function.
     // Also it necessary to pass a test controller object `t` as an argument to execute actions
@@ -239,4 +259,21 @@ export async function iiLogin(t) {
     }
     await t
         .click(page.iiSubmit)
+}
+
+export async function fxfLogin(t) {
+    // Note that it's an async function.
+    // Also it necessary to pass a test controller object `t` as an argument to execute actions
+    await t
+        .click(page.fxfWTTab)
+        .click(page.fxfUserField)
+        .typeText(page.fxfUserField, page.fxfUser)
+        .click(page.fxfPassField)
+        .typeText(page.fxfPassField, page.password)
+
+    if (await page.fxfSubmit.visible === false) {
+        await func.browserscroll(0, 500)
+    }
+    await t
+        .click(page.fxfSubmit)
 }
