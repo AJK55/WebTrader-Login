@@ -166,9 +166,9 @@ export async function ciLogin(t) {
     await t
         .click(page.webTraderTab)
         .click(page.ciUserField)
-        .typeText(page.ciUserField, page.userName)
+        .typeText(page.ciUserField, page.ciUser)
         .click(page.ciPassField)
-        .typeText(page.ciPassField, page.fxciPass)
+        .typeText(page.ciPassField, page.ciPass)
 
     if (await page.ciSubmit.visible === false) {
         await func.browserscroll(0, 500)
