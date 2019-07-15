@@ -267,7 +267,7 @@ export async function fxfLogin(t) {
     await t
         .click(page.fxfWTTab)
         .click(page.fxfUserField)
-        .typeText(page.fxfUserField, page.fxfUser)
+        .typeText(page.fxfUserField, page.iiUser)
         .click(page.fxfPassField)
         .typeText(page.fxfPassField, page.password)
 
