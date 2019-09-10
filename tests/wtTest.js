@@ -37,6 +37,10 @@ import {
 import {
     fxfLogin
 } from '../shared/helper.js';
+import {
+    platActionsFX
+}
+from '../shared/helper.js';
 
 import Page from '../shared/pageObject';
 import Platform from '../shared/platform';
@@ -57,7 +61,7 @@ fixture('WT Forex.com Test')
     .page(page.fxURL);
 test('WT Forex.com Platform', async t => {
     await fxLogin(t);
-    await platActions(t);
+    await platActionsFX(t);
 });
 
 fixture('WT TradFair Test')

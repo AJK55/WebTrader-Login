@@ -34,7 +34,8 @@ export default class Platform {
             this.options = Selector('body > app-root > div > div.mercury__body > div > app-workspace > div > app-full-screen-panel > div > app-browse > div > app-markets-tags > div > ul > li:nth-child(11)'),
             this.sectors = Selector('body > app-root > div > div.mercury__body > div > app-workspace > div > app-full-screen-panel > div > app-browse > div > app-markets-tags > div > ul > li:nth-child(12)'),
             this.fxMetals = Selector('body > app-root > div > div.mercury__body > div > app-workspace > div > app-full-screen-panel > div > app-browse > div > app-markets-tags > div > ul > li:nth-child(13)'),
-            this.crypto = Selector('body > app-root > div > div.mercury__body > div > app-workspace > div > app-full-screen-panel > div > app-browse > div > app-markets-tags > div > ul > li:nth-child(14)')
+            this.crypto = Selector('body > app-root > div > div.mercury__body > div > app-workspace > div > app-full-screen-panel > div > app-browse > div > app-markets-tags > div > ul > li:nth-child(14)'),
+            this.fxForex = Selector('body > app-root > div > div.mercury__body > div > app-workspace > div > app-full-screen-panel > div > app-browse > div > app-markets-tags > div > ul > li.markets-tags__item.markets-tags__item--active.ng-star-inserted')
 
         ];
 
